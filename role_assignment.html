@@ -237,7 +237,9 @@ Access will only be granted after approval through the access management workflo
     <button type="button" class="btn btn-outline-secondary" onclick="downloadFormCopy()">Download Copy</button>
     <button type="button" class="btn btn-outline-success" onclick="downloadFormAsEML()">Download as EML</button>
     <button type="button" class="btn btn-outline-info" onclick="shareFormURL()">Share via URL</button>
+    <button type="button" class="btn btn-outline-warning" onclick="mailtoForm()">Email Link</button>
   </div>
+
 </form>
     </div>
 
@@ -361,6 +363,32 @@ function shareFormURL() {
   history.replaceState(null, '', newURL);
   alert('✅ URL updated! You can now copy and share this link.');
 }
+
+// 🆕 Generate mailto: link with serialized URL fragment
+function mailtoForm() {
+  const data = getFormValues();
+  const encoded = encodeURIComponent(JSON.stringify(data));
+  const formURL = `${window.location.origin}${window.location.pathname}#data=${encoded}`;
+
+  const values = getFormValues();
+
+  // Use template interpolation (same as EML)
+  const to = interpolate(emlConfig.to || "recipient@example.com", values);
+  const subject = interpolate(emlConfig.subject || "Form Link", values);
+
+  // Email body with clickable URL
+  const body = encodeURIComponent(
+    `Here is the link to the filled form:
+
+${formURL}
+
+`
+  );
+
+  const mailto = `mailto:${encodeURIComponent(to)}?subject=${encodeURIComponent(subject)}&body=${body}`;
+  window.location.href = mailto;
+}
+
 
 // 🆕 On load, populate form from URL fragment
 window.addEventListener('DOMContentLoaded', () => {
