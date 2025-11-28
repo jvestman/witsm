@@ -1,0 +1,831 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Service Description</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  </head>
+  <body class="bg-light">
+    <div class="container my-5">
+      <h1 class="mb-4">Service Description</h1>
+      
+<form id="service_description_form" action="#" method="post" class="p-4 bg-white rounded shadow-sm">
+  
+    
+    <fieldset class="mb-4 p-3 rounded ">
+      
+        <legend class="fw-bold">Instructions</legend>
+      
+    
+
+    
+
+    
+      
+        
+
+<div class="alert alert-info alert-dismissible fade show" 
+     role="alert"
+     data-dynamic-alert
+     data-template="&lt;p&gt;&lt;strong&gt;You should use this form to describe a service for inclusion in the service portfolio.&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;This information helps stakeholders understand:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;What the service is  &lt;/li&gt;
+&lt;li&gt;Who uses it  &lt;/li&gt;
+&lt;li&gt;What value it provides  &lt;/li&gt;
+&lt;li&gt;How it is supported and maintained  &lt;/li&gt;
+&lt;li&gt;What commitments exist (availability, responsiveness, quality)  &lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The description should be understandable to both technical and non-technical audiences.&lt;br /&gt;
+Fields marked with * are required.&lt;/p&gt;">
+  
+  <p><strong>You should use this form to describe a service for inclusion in the service portfolio.</strong></p>
+<p>This information helps stakeholders understand:</p>
+<ul>
+<li>What the service is  </li>
+<li>Who uses it  </li>
+<li>What value it provides  </li>
+<li>How it is supported and maintained  </li>
+<li>What commitments exist (availability, responsiveness, quality)  </li>
+</ul>
+<p>The description should be understandable to both technical and non-technical audiences.<br />
+Fields marked with * are required.</p>
+
+  
+  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+  
+</div>
+      
+    
+
+    
+    </fieldset>
+    
+
+  
+    
+    <fieldset class="mb-4 p-3 rounded border">
+      
+        <legend class="fw-bold">Basic Service Information</legend>
+      
+    
+
+    
+
+    
+      
+        
+<div class="mb-3">
+  <label for="service_name" class="form-label">
+    Service Name *
+  </label>
+  <input type="text"
+         class="form-control"
+         id="service_name"
+         name="service_name"
+         placeholder="Short, clear name of the service"
+         data-bs-toggle="tooltip" title="Short, clear name of the service"
+         required>
+</div>
+
+      
+        
+<div class="mb-3">
+  <label for="service_id" class="form-label">
+    Service Identifier *
+  </label>
+  <input type="text"
+         class="form-control"
+         id="service_id"
+         name="service_id"
+         placeholder="Unique ID for the service (e.g., SRV-001)"
+         data-bs-toggle="tooltip" title="Unique ID for the service (e.g., SRV-001)"
+         required>
+</div>
+
+      
+        
+<div class="mb-3">
+  <label for="lifecycle_status" class="form-label">Lifecycle Status *</label>
+  <select class="form-select" id="lifecycle_status" name="lifecycle_status" required>
+    
+      <option value="proposed">Proposed</option>
+    
+      <option value="design">In Design</option>
+    
+      <option value="transition">In Transition</option>
+    
+      <option value="live">Live / Operational</option>
+    
+      <option value="review">Under Review</option>
+    
+      <option value="retiring">Retiring</option>
+    
+      <option value="retired">Retired</option>
+    
+  </select>
+</div>
+      
+        
+<div class="mb-3">
+  <label for="service_summary" class="form-label">
+    Summary of the Service *
+  </label>
+  <textarea class="form-control"
+            id="service_summary"
+            name="service_summary"
+            rows="3"
+            placeholder="Brief description of what the service does and who it benefits"
+            data-bs-toggle="tooltip" title="Brief description of what the service does and who it benefits"
+            required></textarea>
+</div>
+
+      
+    
+
+    
+    </fieldset>
+    
+
+  
+    
+    <fieldset class="mb-4 p-3 rounded border">
+      
+        <legend class="fw-bold">Purpose & Value</legend>
+      
+    
+
+    
+
+    
+      
+        
+<div class="mb-3">
+  <label for="service_purpose" class="form-label">
+    Purpose of the Service *
+  </label>
+  <textarea class="form-control"
+            id="service_purpose"
+            name="service_purpose"
+            rows="3"
+            placeholder="Why does this service exist? What problem does it solve?"
+            data-bs-toggle="tooltip" title="Why does this service exist? What problem does it solve?"
+            required></textarea>
+</div>
+
+      
+        
+<div class="mb-3">
+  <label for="service_value" class="form-label">
+    Value Provided *
+  </label>
+  <textarea class="form-control"
+            id="service_value"
+            name="service_value"
+            rows="3"
+            placeholder="What value does this service provide to its users or the organization?"
+            data-bs-toggle="tooltip" title="What value does this service provide to its users or the organization?"
+            required></textarea>
+</div>
+
+      
+    
+
+    
+    </fieldset>
+    
+
+  
+    
+    <fieldset class="mb-4 p-3 rounded border">
+      
+        <legend class="fw-bold">Customers and Users</legend>
+      
+    
+
+    
+
+    
+      
+        
+<div class="mb-3">
+  <label for="customer_groups" class="form-label">
+    Customer Groups *
+  </label>
+  <textarea class="form-control"
+            id="customer_groups"
+            name="customer_groups"
+            rows="2"
+            placeholder="Who receives value from this service? (e.g., departments, user groups)"
+            data-bs-toggle="tooltip" title="Who receives value from this service? (e.g., departments, user groups)"
+            required></textarea>
+</div>
+
+      
+        
+<div class="mb-3">
+  <label for="user_groups" class="form-label">
+    User Groups
+  </label>
+  <textarea class="form-control"
+            id="user_groups"
+            name="user_groups"
+            rows="2"
+            placeholder="Who directly uses the service? (May differ from customers)"
+            data-bs-toggle="tooltip" title="Who directly uses the service? (May differ from customers)"
+            ></textarea>
+</div>
+
+      
+    
+
+    
+    </fieldset>
+    
+
+  
+    
+    <fieldset class="mb-4 p-3 rounded border">
+      
+        <legend class="fw-bold">Key Components and Dependencies</legend>
+      
+    
+
+    
+
+    
+      
+        
+<div class="mb-3">
+  <label for="service_components" class="form-label">
+    Major Components
+  </label>
+  <textarea class="form-control"
+            id="service_components"
+            name="service_components"
+            rows="3"
+            placeholder="Main systems, applications, tools, or resources that make up this service"
+            data-bs-toggle="tooltip" title="Main systems, applications, tools, or resources that make up this service"
+            ></textarea>
+</div>
+
+      
+        
+<div class="mb-3">
+  <label for="technical_dependencies" class="form-label">
+    Technical Dependencies
+  </label>
+  <textarea class="form-control"
+            id="technical_dependencies"
+            name="technical_dependencies"
+            rows="3"
+            placeholder="Other systems or services this service depends on"
+            data-bs-toggle="tooltip" title="Other systems or services this service depends on"
+            ></textarea>
+</div>
+
+      
+    
+
+    
+    </fieldset>
+    
+
+  
+    
+    <fieldset class="mb-4 p-3 rounded border">
+      
+        <legend class="fw-bold">Support & Responsibilities</legend>
+      
+    
+
+    
+
+    
+      
+        
+<div class="mb-3">
+  <label for="service_owner" class="form-label">
+    Service Owner
+  </label>
+  <input type="text"
+         class="form-control"
+         id="service_owner"
+         name="service_owner"
+         placeholder="Name or role responsible for the service"
+         data-bs-toggle="tooltip" title="Name or role responsible for the service"
+         >
+</div>
+
+      
+        
+<div class="mb-3">
+  <label for="service_contact" class="form-label">
+    Primary Support Contact
+  </label>
+  <input type="text"
+         class="form-control"
+         id="service_contact"
+         name="service_contact"
+         placeholder="Email or team responsible for support"
+         data-bs-toggle="tooltip" title="Email or team responsible for support"
+         >
+</div>
+
+      
+        
+<div class="mb-3">
+  <label for="support_hours" class="form-label">
+    Support Hours
+  </label>
+  <textarea class="form-control"
+            id="support_hours"
+            name="support_hours"
+            rows="2"
+            placeholder="When support for this service is available (e.g., 8–16, weekdays)"
+            data-bs-toggle="tooltip" title="When support for this service is available (e.g., 8–16, weekdays)"
+            ></textarea>
+</div>
+
+      
+        
+<div class="mb-3">
+  <label for="maintenance_windows" class="form-label">
+    Regular Maintenance Windows
+  </label>
+  <textarea class="form-control"
+            id="maintenance_windows"
+            name="maintenance_windows"
+            rows="2"
+            placeholder="Planned times when maintenance may cause downtime"
+            data-bs-toggle="tooltip" title="Planned times when maintenance may cause downtime"
+            ></textarea>
+</div>
+
+      
+    
+
+    
+    </fieldset>
+    
+
+  
+    
+    <fieldset class="mb-4 p-3 rounded border">
+      
+        <legend class="fw-bold">Quality Commitments</legend>
+      
+    
+
+    
+
+    
+      
+        
+<div class="mb-3">
+  <label for="availability_target" class="form-label">
+    Availability Target
+  </label>
+  <textarea class="form-control"
+            id="availability_target"
+            name="availability_target"
+            rows="2"
+            placeholder="Expected availability (e.g., 99.5%, office hours, 24/7)"
+            data-bs-toggle="tooltip" title="Expected availability (e.g., 99.5%, office hours, 24/7)"
+            ></textarea>
+</div>
+
+      
+        
+<div class="mb-3">
+  <label for="response_expectations" class="form-label">
+    Response Expectations
+  </label>
+  <textarea class="form-control"
+            id="response_expectations"
+            name="response_expectations"
+            rows="2"
+            placeholder="Typical response/resolution times for support inquiries"
+            data-bs-toggle="tooltip" title="Typical response/resolution times for support inquiries"
+            ></textarea>
+</div>
+
+      
+        
+<div class="mb-3">
+  <label for="performance_expectations" class="form-label">
+    Performance Expectations
+  </label>
+  <textarea class="form-control"
+            id="performance_expectations"
+            name="performance_expectations"
+            rows="2"
+            placeholder="Important performance expectations (speed, capacity, etc.)"
+            data-bs-toggle="tooltip" title="Important performance expectations (speed, capacity, etc.)"
+            ></textarea>
+</div>
+
+      
+    
+
+    
+    </fieldset>
+    
+
+  
+    
+    <fieldset class="mb-4 p-3 rounded border">
+      
+        <legend class="fw-bold">Security & Compliance</legend>
+      
+    
+
+    
+
+    
+      
+        
+<div class="mb-3">
+  <label for="security_measures" class="form-label">
+    Security Measures
+  </label>
+  <textarea class="form-control"
+            id="security_measures"
+            name="security_measures"
+            rows="3"
+            placeholder="Important security controls, protections, or handling requirements"
+            data-bs-toggle="tooltip" title="Important security controls, protections, or handling requirements"
+            ></textarea>
+</div>
+
+      
+        
+<div class="mb-3">
+  <label for="data_handling" class="form-label">
+    Data Handling Requirements
+  </label>
+  <textarea class="form-control"
+            id="data_handling"
+            name="data_handling"
+            rows="3"
+            placeholder="Sensitive data considerations, retention, classification, etc."
+            data-bs-toggle="tooltip" title="Sensitive data considerations, retention, classification, etc."
+            ></textarea>
+</div>
+
+      
+    
+
+    
+    </fieldset>
+    
+
+  
+    
+    <fieldset class="mb-4 p-3 rounded border">
+      
+        <legend class="fw-bold">Business Model, Cost & Financing</legend>
+      
+    
+
+    
+
+    
+      
+        
+<div class="mb-3">
+  <label for="cost_structure" class="form-label">
+    Cost Structure
+  </label>
+  <textarea class="form-control"
+            id="cost_structure"
+            name="cost_structure"
+            rows="3"
+            placeholder="Describe fixed vs variable costs, major cost drivers, scaling behavior, etc."
+            data-bs-toggle="tooltip" title="Describe fixed vs variable costs, major cost drivers, scaling behavior, etc."
+            ></textarea>
+</div>
+
+      
+        
+<div class="mb-3">
+  <label for="internal_costs" class="form-label">
+    Internal Cost Components
+  </label>
+  <textarea class="form-control"
+            id="internal_costs"
+            name="internal_costs"
+            rows="3"
+            placeholder="Internal resource costs (staff time, infrastructure, licensing, overhead)."
+            data-bs-toggle="tooltip" title="Internal resource costs (staff time, infrastructure, licensing, overhead)."
+            ></textarea>
+</div>
+
+      
+        
+<div class="mb-3">
+  <label for="pricing_model" class="form-label">
+    Customer Pricing Model
+  </label>
+  <textarea class="form-control"
+            id="pricing_model"
+            name="pricing_model"
+            rows="3"
+            placeholder="How is the service priced? Subscription? Usage-based? Included in other fees?"
+            data-bs-toggle="tooltip" title="How is the service priced? Subscription? Usage-based? Included in other fees?"
+            ></textarea>
+</div>
+
+      
+        
+<div class="mb-3">
+  <label for="financing_model" class="form-label">
+    Financing / Funding Model
+  </label>
+  <textarea class="form-control"
+            id="financing_model"
+            name="financing_model"
+            rows="3"
+            placeholder="Budgeting approach, funding source, recharge model, cost allocation method."
+            data-bs-toggle="tooltip" title="Budgeting approach, funding source, recharge model, cost allocation method."
+            ></textarea>
+</div>
+
+      
+        
+<div class="mb-3">
+  <label for="forecasting_notes" class="form-label">
+    Budgeting & Forecasting Considerations
+  </label>
+  <textarea class="form-control"
+            id="forecasting_notes"
+            name="forecasting_notes"
+            rows="3"
+            placeholder="Expected growth, demand fluctuations, renewal cycles, major cost changes."
+            data-bs-toggle="tooltip" title="Expected growth, demand fluctuations, renewal cycles, major cost changes."
+            ></textarea>
+</div>
+
+      
+    
+
+    
+    </fieldset>
+    
+
+  
+    
+    <fieldset class="mb-4 p-3 rounded border">
+      
+        <legend class="fw-bold">Additional Information</legend>
+      
+    
+
+    
+
+    
+      
+        
+<div class="mb-3">
+  <label for="additional_notes" class="form-label">
+    Additional Notes
+  </label>
+  <textarea class="form-control"
+            id="additional_notes"
+            name="additional_notes"
+            rows="3"
+            placeholder="Anything else relevant to the service description"
+            data-bs-toggle="tooltip" title="Anything else relevant to the service description"
+            ></textarea>
+</div>
+
+      
+    
+
+    
+    </fieldset>
+    
+
+  
+
+
+  <div class="d-flex gap-2 flex-wrap">
+
+    
+
+    <button type="button"
+            class="btn btn-outline-primary"
+            onclick="downloadFormCopy()"
+            data-bs-toggle="tooltip"
+            title="Download an HTML copy of the filled form for archiving.">
+      Download Copy
+    </button>
+
+    <button type="button"
+            class="btn btn-outline-primary"
+            onclick="downloadFormAsEML()"
+            data-bs-toggle="tooltip"
+            title="Download a ready-to-send EML email containing the completed form.">
+      Download as EML
+    </button>
+
+    <button type="button"
+            class="btn btn-outline-primary"
+            onclick="shareFormURL()"
+            data-bs-toggle="tooltip"
+            title="Generate a shareable link containing the filled form data.">
+      Share via URL
+    </button>
+
+    <button type="button"
+            class="btn btn-outline-primary"
+            onclick="mailtoForm()"
+            data-bs-toggle="tooltip"
+            title="Compose an email with a link to the filled form.">
+      Email Link
+    </button>
+
+  </div>
+
+</form>
+      
+        <div class="mt-4 
+          
+          text-left">
+
+          
+            <p><a href="https://jvestman.github.io/witsm/">WitSM</a></p>
+          
+        </div>
+      
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    
+    <script>
+function prepareFormValues() {
+  document.querySelectorAll('input, textarea, select').forEach(el => {
+    if (el.type === 'checkbox' || el.type === 'radio') {
+      if (el.checked) el.setAttribute('checked', 'checked');
+      else el.removeAttribute('checked');
+    } else if (el.tagName.toLowerCase() === 'select') {
+      Array.from(el.options).forEach(opt => {
+        if (opt.value === el.value) opt.setAttribute('selected', 'selected');
+        else opt.removeAttribute('selected');
+      });
+    } else if (el.tagName.toLowerCase() === 'textarea') {
+      el.textContent = el.value;
+    } else {
+      el.setAttribute('value', el.value);
+    }
+  });
+  return "<!DOCTYPE html>\n" + document.documentElement.outerHTML;
+}
+
+function getFormValues() {
+  const data = {};
+  document.querySelectorAll('input, textarea, select').forEach(el => {
+    if (!el.name) return;
+    if (el.type === 'checkbox') {
+      if (!data[el.name]) data[el.name] = [];
+      if (el.checked) data[el.name].push(el.value);
+    } else if (el.type === 'radio') {
+      if (el.checked) data[el.name] = el.value;
+    } else {
+      data[el.name] = el.value;
+    }
+  });
+  return data;
+}
+
+function setFormValues(data) {
+  for (const [name, value] of Object.entries(data)) {
+    const elements = document.querySelectorAll(`[name="${name}"]`);
+    elements.forEach(el => {
+      if (el.type === 'checkbox') {
+        el.checked = Array.isArray(value) ? value.includes(el.value) : value === el.value;
+      } else if (el.type === 'radio') {
+        el.checked = el.value === value;
+      } else {
+        el.value = value;
+      }
+    });
+  }
+}
+
+function interpolate(template, values) {
+  if (!template) return '';
+  return template.replace(/\$\{(\w+)\}/g, (_, key) => values[key] || '');
+}
+
+function downloadFormCopy() {
+  const html = prepareFormValues();
+  const timestamp = new Date().toISOString().replace(/[:T]/g, '-').split('.')[0];
+  const filename = `filled_form_${timestamp}.html`;
+  const blob = new Blob([html], { type: 'text/html' });
+  const a = document.createElement('a');
+  a.href = URL.createObjectURL(blob);
+  a.download = filename;
+  a.click();
+  URL.revokeObjectURL(a.href);
+}
+
+function downloadFormAsEML() {
+  const html = prepareFormValues();
+  const values = getFormValues();
+  const boundary = "----=_Boundary_" + Math.random().toString(36).slice(2);
+  const timestamp = new Date().toISOString().replace(/[:T]/g, '-').split('.')[0];
+  const filename = `filled_form_${timestamp}.eml`;
+
+  const from = interpolate(emlConfig.from || "no-reply@example.com", values);
+  const to = interpolate(emlConfig.to || "recipient@example.com", values);
+  const subject = interpolate(emlConfig.subject || "Completed Form Submission", values);
+
+  const emlParts = [
+    `From: ${from}`,
+    `To: ${to}`,
+    `Subject: ${subject}`,
+    "MIME-Version: 1.0",
+    `Content-Type: multipart/alternative; boundary=\"${boundary}\"`,
+    "",
+    `--${boundary}`,
+    "Content-Type: text/plain; charset=utf-8",
+    "",
+    "Your email client does not support HTML. The completed form is below.",
+    "",
+    `--${boundary}`,
+    "Content-Type: text/html; charset=utf-8",
+    "Content-Transfer-Encoding: base64",
+    "",      
+    btoa(unescape(encodeURIComponent(html))),
+    "",
+    `--${boundary}--`
+  ];
+
+  const emlContent = emlParts.join("\r\n");
+  const blob = new Blob([emlContent], { type: 'message/rfc822' });
+  const a = document.createElement('a');
+  a.href = URL.createObjectURL(blob);
+  a.download = filename;
+  a.click();
+  URL.revokeObjectURL(a.href);
+}
+
+// 🆕 Serialize form into URL fragment and navigate
+function shareFormURL() {
+  const data = getFormValues();
+  const encoded = encodeURIComponent(JSON.stringify(data));
+  const newURL = `${window.location.pathname}#data=${encoded}`;
+  history.replaceState(null, '', newURL);
+  alert('✅ URL updated! You can now copy and share this link.');
+}
+
+function mailtoForm() {
+  const values = getFormValues();
+  const encodedData = encodeURIComponent(JSON.stringify(values));
+  const formURL = `${window.location.origin}${window.location.pathname}#data=${encodedData}`;
+
+  const to = interpolate(emlConfig.to || "recipient@example.com", values);
+  const subject = interpolate(emlConfig.subject || "Form Link", values);
+
+  // Interpolate mail body template if provided
+  const bodyTemplate = emlConfig.mailto_body || "Here is the link to your filled form:\
+\
+${form_url}";
+  const body = encodeURIComponent(interpolate(bodyTemplate, { ...values, form_url: formURL }));
+
+  const mailto = `mailto:${encodeURIComponent(to)}?subject=${encodeURIComponent(subject)}&body=${body}`;
+  window.location.href = mailto;
+}
+
+
+// 🆕 On load, populate form from URL fragment
+window.addEventListener('DOMContentLoaded', () => {
+  const match = window.location.hash.match(/^#data=(.+)$/);
+  if (match) {
+    try {
+      const decoded = JSON.parse(decodeURIComponent(match[1]));
+      setFormValues(decoded);
+    } catch (e) {
+      console.warn('Failed to parse form data from URL fragment:', e);
+    }
+  }
+});
+
+
+// Enable Bootstrap tooltips
+document.addEventListener("DOMContentLoaded", () => {
+  const tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+  tooltipTriggerList.forEach(el => new bootstrap.Tooltip(el))
+})
+
+
+// Injected from YAML
+const emlConfig = {};
+</script>
+
+  </body>
+</html>
