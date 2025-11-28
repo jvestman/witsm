@@ -1,0 +1,743 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Problem Record / Known Error Entry</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  </head>
+  <body class="bg-light">
+    <div class="container my-5">
+      <h1 class="mb-4">Problem Record / Known Error Entry</h1>
+      
+<form id="problem_record_form" action="#" method="post" class="p-4 bg-white rounded shadow-sm">
+  
+    
+
+    
+
+    
+      
+        
+
+<div class="alert alert-info " 
+     role="alert"
+     data-dynamic-alert
+     data-template="&lt;h2&gt;How to use this form&lt;/h2&gt;
+&lt;p&gt;Use this form to record a &lt;strong&gt;problem&lt;/strong&gt; or &lt;strong&gt;known error&lt;/strong&gt; entry.&lt;br /&gt;
+A &lt;em&gt;problem&lt;/em&gt; is the underlying cause of one or more incidents.&lt;br /&gt;
+A &lt;em&gt;known error&lt;/em&gt; is a problem that has been analyzed and has:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;a documented root cause, and/or  &lt;/li&gt;
+&lt;li&gt;a verified workaround, even if no permanent fix exists yet.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;This form helps you:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;consolidate relevant information&lt;/li&gt;
+&lt;li&gt;support investigation&lt;/li&gt;
+&lt;li&gt;document interim measures&lt;/li&gt;
+&lt;li&gt;plan long-term resolution&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Fields marked with * are required.&lt;/p&gt;">
+  
+  <h2>How to use this form</h2>
+<p>Use this form to record a <strong>problem</strong> or <strong>known error</strong> entry.<br />
+A <em>problem</em> is the underlying cause of one or more incidents.<br />
+A <em>known error</em> is a problem that has been analyzed and has:</p>
+<ul>
+<li>a documented root cause, and/or  </li>
+<li>a verified workaround, even if no permanent fix exists yet.</li>
+</ul>
+<p>This form helps you:</p>
+<ul>
+<li>consolidate relevant information</li>
+<li>support investigation</li>
+<li>document interim measures</li>
+<li>plan long-term resolution</li>
+</ul>
+<p>Fields marked with * are required.</p>
+
+  
+</div>
+      
+    
+
+    
+
+  
+    
+    <fieldset class="mb-4 p-3 rounded border">
+      
+        <legend class="fw-bold">Identification</legend>
+      
+    
+
+    
+
+    
+      
+        
+<div class="mb-3">
+  <label for="problem_id" class="form-label">
+    Problem ID *
+  </label>
+  <input type="text"
+         class="form-control"
+         id="problem_id"
+         name="problem_id"
+         placeholder="Unique identifier for this problem record"
+         data-bs-toggle="tooltip" title="Unique identifier for this problem record"
+         required>
+</div>
+
+      
+        
+<div class="mb-3">
+  <label for="subject" class="form-label">
+    Subject *
+  </label>
+  <input type="text"
+         class="form-control"
+         id="subject"
+         name="subject"
+         placeholder="Short title summarizing the problem"
+         data-bs-toggle="tooltip" title="Short title summarizing the problem"
+         required>
+</div>
+
+      
+        
+<div class="mb-3">
+  <label for="detected_date" class="form-label">Date Problem Detected</label>
+  <input type="date" class="form-control" id="detected_date" name="detected_date"
+         >
+</div>
+      
+        
+<div class="mb-3">
+  <label for="detected_by" class="form-label">
+    Detected By
+  </label>
+  <input type="text"
+         class="form-control"
+         id="detected_by"
+         name="detected_by"
+         placeholder="Person or team who reported or identified the problem"
+         data-bs-toggle="tooltip" title="Person or team who reported or identified the problem"
+         >
+</div>
+
+      
+        
+<div class="mb-3">
+  <label for="related_service" class="form-label">
+    Affected Service or Component
+  </label>
+  <input type="text"
+         class="form-control"
+         id="related_service"
+         name="related_service"
+         placeholder="Name of the service or component impacted"
+         data-bs-toggle="tooltip" title="Name of the service or component impacted"
+         >
+</div>
+
+      
+        
+<div class="mb-3">
+  <label for="problem_status" class="form-label">Current Status</label>
+  <select class="form-select" id="problem_status" name="problem_status" >
+    
+      <option value="new">New</option>
+    
+      <option value="investigation">Under Investigation</option>
+    
+      <option value="workaround_applied">Workaround Applied</option>
+    
+      <option value="known_error">Known Error</option>
+    
+      <option value="pending_fix">Pending Fix</option>
+    
+      <option value="resolved">Resolved</option>
+    
+      <option value="closed">Closed</option>
+    
+  </select>
+</div>
+      
+        
+<div class="mb-3">
+  <label for="description" class="form-label">
+    Description of the Problem *
+  </label>
+  <textarea class="form-control"
+            id="description"
+            name="description"
+            rows="3"
+            placeholder="Describe the problem symptoms at a high level"
+            data-bs-toggle="tooltip" title="Describe the problem symptoms at a high level"
+            required></textarea>
+</div>
+
+      
+    
+
+    
+    </fieldset>
+    
+
+  
+    
+    <fieldset class="mb-4 p-3 rounded border">
+      
+        <legend class="fw-bold">Impact Assessment</legend>
+      
+    
+
+    
+
+    
+      
+        
+<div class="mb-3">
+  <label for="impact" class="form-label">
+    Impact Description
+  </label>
+  <textarea class="form-control"
+            id="impact"
+            name="impact"
+            rows="3"
+            placeholder="Describe the scope and severity of the impact"
+            data-bs-toggle="tooltip" title="Describe the scope and severity of the impact"
+            ></textarea>
+</div>
+
+      
+        
+<div class="mb-3">
+  <label for="impact_level" class="form-label">Impact Level</label>
+  <select class="form-select" id="impact_level" name="impact_level" >
+    
+      <option value="low">Low — Annoying</option>
+    
+      <option value="moderate">Moderate — Hindering</option>
+    
+      <option value="high">High — Blocking</option>
+    
+      <option value="critical">Critical — Catastrophic</option>
+    
+  </select>
+</div>
+      
+        
+<div class="mb-3">
+  <label for="related_incidents" class="form-label">
+    Related Incident IDs
+  </label>
+  <textarea class="form-control"
+            id="related_incidents"
+            name="related_incidents"
+            rows="2"
+            placeholder="List incident numbers or references"
+            data-bs-toggle="tooltip" title="List incident numbers or references"
+            ></textarea>
+</div>
+
+      
+    
+
+    
+    </fieldset>
+    
+
+  
+    
+    <fieldset class="mb-4 p-3 rounded border">
+      
+        <legend class="fw-bold">Diagnosis</legend>
+      
+    
+
+    
+
+    
+      
+        
+<div class="mb-3">
+  <label for="initial_analysis" class="form-label">
+    Initial Analysis
+  </label>
+  <textarea class="form-control"
+            id="initial_analysis"
+            name="initial_analysis"
+            rows="3"
+            placeholder="Describe early findings or diagnostic activities"
+            data-bs-toggle="tooltip" title="Describe early findings or diagnostic activities"
+            ></textarea>
+</div>
+
+      
+        
+<div class="mb-3">
+  <label for="evidence" class="form-label">
+    Evidence / Observations
+  </label>
+  <textarea class="form-control"
+            id="evidence"
+            name="evidence"
+            rows="4"
+            placeholder="Error messages, logs, correlated events, patterns"
+            data-bs-toggle="tooltip" title="Error messages, logs, correlated events, patterns"
+            ></textarea>
+</div>
+
+      
+        
+<div class="mb-3">
+  <label for="suspected_causes" class="form-label">
+    Suspected Causes
+  </label>
+  <textarea class="form-control"
+            id="suspected_causes"
+            name="suspected_causes"
+            rows="3"
+            placeholder="List hypotheses or suspected underlying causes"
+            data-bs-toggle="tooltip" title="List hypotheses or suspected underlying causes"
+            ></textarea>
+</div>
+
+      
+    
+
+    
+    </fieldset>
+    
+
+  
+    
+    <fieldset class="mb-4 p-3 rounded border">
+      
+        <legend class="fw-bold">Workaround</legend>
+      
+    
+
+    
+
+    
+      
+        
+<div class="mb-3">
+  <label for="workaround" class="form-label">
+    Workaround Description
+  </label>
+  <textarea class="form-control"
+            id="workaround"
+            name="workaround"
+            rows="3"
+            placeholder="Describe current workaround, if available"
+            data-bs-toggle="tooltip" title="Describe current workaround, if available"
+            ></textarea>
+</div>
+
+      
+        
+<div class="mb-3">
+  <label for="workaround_effectiveness" class="form-label">
+    Effectiveness of Workaround
+  </label>
+  <textarea class="form-control"
+            id="workaround_effectiveness"
+            name="workaround_effectiveness"
+            rows="2"
+            placeholder="Does it fully or partially resolve symptoms?"
+            data-bs-toggle="tooltip" title="Does it fully or partially resolve symptoms?"
+            ></textarea>
+</div>
+
+      
+    
+
+    
+    </fieldset>
+    
+
+  
+    
+    <fieldset class="mb-4 p-3 rounded border">
+      
+        <legend class="fw-bold">Root Cause and Known Error Details</legend>
+      
+    
+
+    
+
+    
+      
+        
+<div class="mb-3">
+  <label for="root_cause" class="form-label">
+    Root Cause
+  </label>
+  <textarea class="form-control"
+            id="root_cause"
+            name="root_cause"
+            rows="4"
+            placeholder="Describe confirmed underlying cause"
+            data-bs-toggle="tooltip" title="Describe confirmed underlying cause"
+            ></textarea>
+</div>
+
+      
+        
+<div class="mb-3">
+  <label for="error_details" class="form-label">
+    Known Error Details
+  </label>
+  <textarea class="form-control"
+            id="error_details"
+            name="error_details"
+            rows="3"
+            placeholder="Additional details or technical notes about the known error"
+            data-bs-toggle="tooltip" title="Additional details or technical notes about the known error"
+            ></textarea>
+</div>
+
+      
+        
+<div class="mb-3">
+  <label for="known_error_status" class="form-label">Known Error Status</label>
+  <select class="form-select" id="known_error_status" name="known_error_status" >
+    
+      <option value="not_known_error">Not a Known Error</option>
+    
+      <option value="cause_identified">Known Error (Cause Identified)</option>
+    
+      <option value="workaround_available">Known Error (Workaround Available)</option>
+    
+      <option value="fully_documented">Known Error (Fully Documented)</option>
+    
+  </select>
+</div>
+      
+    
+
+    
+    </fieldset>
+    
+
+  
+    
+    <fieldset class="mb-4 p-3 rounded border">
+      
+        <legend class="fw-bold">Resolution Plan</legend>
+      
+    
+
+    
+
+    
+      
+        
+<div class="mb-3">
+  <label for="permanent_fix" class="form-label">
+    Planned Permanent Fix
+  </label>
+  <textarea class="form-control"
+            id="permanent_fix"
+            name="permanent_fix"
+            rows="4"
+            placeholder="Describe the planned long-term resolution (if known)"
+            data-bs-toggle="tooltip" title="Describe the planned long-term resolution (if known)"
+            ></textarea>
+</div>
+
+      
+        
+<div class="mb-3">
+  <label for="required_changes" class="form-label">
+    Required Changes
+  </label>
+  <textarea class="form-control"
+            id="required_changes"
+            name="required_changes"
+            rows="3"
+            placeholder="Software updates, configuration changes, supplier actions, etc."
+            data-bs-toggle="tooltip" title="Software updates, configuration changes, supplier actions, etc."
+            ></textarea>
+</div>
+
+      
+        
+<div class="mb-3">
+  <label for="risks" class="form-label">
+    Risks or Dependencies
+  </label>
+  <textarea class="form-control"
+            id="risks"
+            name="risks"
+            rows="3"
+            placeholder="Dependencies, prerequisites, or uncertainties affecting resolution"
+            data-bs-toggle="tooltip" title="Dependencies, prerequisites, or uncertainties affecting resolution"
+            ></textarea>
+</div>
+
+      
+        
+<div class="mb-3">
+  <label for="expected_resolution_date" class="form-label">Expected Resolution Date</label>
+  <input type="date" class="form-control" id="expected_resolution_date" name="expected_resolution_date"
+         >
+</div>
+      
+    
+
+    
+    </fieldset>
+    
+
+  
+    
+    <fieldset class="mb-4 p-3 rounded border">
+      
+        <legend class="fw-bold">Notes</legend>
+      
+    
+
+    
+
+    
+      
+        
+<div class="mb-3">
+  <label for="status_notes" class="form-label">
+    Status Notes
+  </label>
+  <textarea class="form-control"
+            id="status_notes"
+            name="status_notes"
+            rows="2"
+            placeholder="Additional information about current state"
+            data-bs-toggle="tooltip" title="Additional information about current state"
+            ></textarea>
+</div>
+
+      
+    
+
+    
+    </fieldset>
+    
+
+  
+
+
+  <div class="d-flex gap-2 flex-wrap">
+
+    
+
+    <button type="button"
+            class="btn btn-outline-primary"
+            onclick="downloadFormCopy()"
+            data-bs-toggle="tooltip"
+            title="Download an HTML copy of the filled form for archiving.">
+      Download Copy
+    </button>
+
+    <button type="button"
+            class="btn btn-outline-primary"
+            onclick="downloadFormAsEML()"
+            data-bs-toggle="tooltip"
+            title="Download a ready-to-send EML email containing the completed form.">
+      Download as EML
+    </button>
+
+    <button type="button"
+            class="btn btn-outline-primary"
+            onclick="shareFormURL()"
+            data-bs-toggle="tooltip"
+            title="Generate a shareable link containing the filled form data.">
+      Share via URL
+    </button>
+
+    <button type="button"
+            class="btn btn-outline-primary"
+            onclick="mailtoForm()"
+            data-bs-toggle="tooltip"
+            title="Compose an email with a link to the filled form.">
+      Email Link
+    </button>
+
+  </div>
+
+</form>
+      
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    
+    <script>
+function prepareFormValues() {
+  document.querySelectorAll('input, textarea, select').forEach(el => {
+    if (el.type === 'checkbox' || el.type === 'radio') {
+      if (el.checked) el.setAttribute('checked', 'checked');
+      else el.removeAttribute('checked');
+    } else if (el.tagName.toLowerCase() === 'select') {
+      Array.from(el.options).forEach(opt => {
+        if (opt.value === el.value) opt.setAttribute('selected', 'selected');
+        else opt.removeAttribute('selected');
+      });
+    } else if (el.tagName.toLowerCase() === 'textarea') {
+      el.textContent = el.value;
+    } else {
+      el.setAttribute('value', el.value);
+    }
+  });
+  return "<!DOCTYPE html>\n" + document.documentElement.outerHTML;
+}
+
+function getFormValues() {
+  const data = {};
+  document.querySelectorAll('input, textarea, select').forEach(el => {
+    if (!el.name) return;
+    if (el.type === 'checkbox') {
+      if (!data[el.name]) data[el.name] = [];
+      if (el.checked) data[el.name].push(el.value);
+    } else if (el.type === 'radio') {
+      if (el.checked) data[el.name] = el.value;
+    } else {
+      data[el.name] = el.value;
+    }
+  });
+  return data;
+}
+
+function setFormValues(data) {
+  for (const [name, value] of Object.entries(data)) {
+    const elements = document.querySelectorAll(`[name="${name}"]`);
+    elements.forEach(el => {
+      if (el.type === 'checkbox') {
+        el.checked = Array.isArray(value) ? value.includes(el.value) : value === el.value;
+      } else if (el.type === 'radio') {
+        el.checked = el.value === value;
+      } else {
+        el.value = value;
+      }
+    });
+  }
+}
+
+function interpolate(template, values) {
+  if (!template) return '';
+  return template.replace(/\$\{(\w+)\}/g, (_, key) => values[key] || '');
+}
+
+function downloadFormCopy() {
+  const html = prepareFormValues();
+  const timestamp = new Date().toISOString().replace(/[:T]/g, '-').split('.')[0];
+  const filename = `filled_form_${timestamp}.html`;
+  const blob = new Blob([html], { type: 'text/html' });
+  const a = document.createElement('a');
+  a.href = URL.createObjectURL(blob);
+  a.download = filename;
+  a.click();
+  URL.revokeObjectURL(a.href);
+}
+
+function downloadFormAsEML() {
+  const html = prepareFormValues();
+  const values = getFormValues();
+  const boundary = "----=_Boundary_" + Math.random().toString(36).slice(2);
+  const timestamp = new Date().toISOString().replace(/[:T]/g, '-').split('.')[0];
+  const filename = `filled_form_${timestamp}.eml`;
+
+  const from = interpolate(emlConfig.from || "no-reply@example.com", values);
+  const to = interpolate(emlConfig.to || "recipient@example.com", values);
+  const subject = interpolate(emlConfig.subject || "Completed Form Submission", values);
+
+  const emlParts = [
+    `From: ${from}`,
+    `To: ${to}`,
+    `Subject: ${subject}`,
+    "MIME-Version: 1.0",
+    `Content-Type: multipart/alternative; boundary=\"${boundary}\"`,
+    "",
+    `--${boundary}`,
+    "Content-Type: text/plain; charset=utf-8",
+    "",
+    "Your email client does not support HTML. The completed form is below.",
+    "",
+    `--${boundary}`,
+    "Content-Type: text/html; charset=utf-8",
+    "Content-Transfer-Encoding: base64",
+    "",      
+    btoa(unescape(encodeURIComponent(html))),
+    "",
+    `--${boundary}--`
+  ];
+
+  const emlContent = emlParts.join("\r\n");
+  const blob = new Blob([emlContent], { type: 'message/rfc822' });
+  const a = document.createElement('a');
+  a.href = URL.createObjectURL(blob);
+  a.download = filename;
+  a.click();
+  URL.revokeObjectURL(a.href);
+}
+
+// 🆕 Serialize form into URL fragment and navigate
+function shareFormURL() {
+  const data = getFormValues();
+  const encoded = encodeURIComponent(JSON.stringify(data));
+  const newURL = `${window.location.pathname}#data=${encoded}`;
+  history.replaceState(null, '', newURL);
+  alert('✅ URL updated! You can now copy and share this link.');
+}
+
+function mailtoForm() {
+  const values = getFormValues();
+  const encodedData = encodeURIComponent(JSON.stringify(values));
+  const formURL = `${window.location.origin}${window.location.pathname}#data=${encodedData}`;
+
+  const to = interpolate(emlConfig.to || "recipient@example.com", values);
+  const subject = interpolate(emlConfig.subject || "Form Link", values);
+
+  // Interpolate mail body template if provided
+  const bodyTemplate = emlConfig.mailto_body || "Here is the link to your filled form:\
+\
+${form_url}";
+  const body = encodeURIComponent(interpolate(bodyTemplate, { ...values, form_url: formURL }));
+
+  const mailto = `mailto:${encodeURIComponent(to)}?subject=${encodeURIComponent(subject)}&body=${body}`;
+  window.location.href = mailto;
+}
+
+
+// 🆕 On load, populate form from URL fragment
+window.addEventListener('DOMContentLoaded', () => {
+  const match = window.location.hash.match(/^#data=(.+)$/);
+  if (match) {
+    try {
+      const decoded = JSON.parse(decodeURIComponent(match[1]));
+      setFormValues(decoded);
+    } catch (e) {
+      console.warn('Failed to parse form data from URL fragment:', e);
+    }
+  }
+});
+
+
+// Enable Bootstrap tooltips
+document.addEventListener("DOMContentLoaded", () => {
+  const tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+  tooltipTriggerList.forEach(el => new bootstrap.Tooltip(el))
+})
+
+
+// Injected from YAML
+const emlConfig = {"from": "no-reply@example.com", "mailto_body": null, "subject": "Completed Problem Record", "to": "recipient@example.com"};
+</script>
+
+  </body>
+</html>
