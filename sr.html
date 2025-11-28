@@ -70,7 +70,7 @@ If something is not working according to specification, please submit an <strong
     
     <fieldset class="mb-4 p-3 rounded border">
       
-        <legend class="fw-bold">Requester & Identification</legend>
+        <legend class="fw-bold">Identification</legend>
       
     
 
@@ -110,21 +110,6 @@ If something is not working according to specification, please submit an <strong
       
         
 <div class="mb-3">
-  <label for="requester" class="form-label">
-    Your Name / Email / Dept *
-  </label>
-  <input type="text"
-         class="form-control"
-         id="requester"
-         name="requester"
-         placeholder="Name, email, and department in one field"
-         data-bs-toggle="tooltip" title="Name, email, and department in one field"
-         required>
-</div>
-
-      
-        
-<div class="mb-3">
   <label for="priority" class="form-label">Priority *</label>
   <select class="form-select" id="priority" name="priority" required>
     
@@ -138,6 +123,69 @@ If something is not working according to specification, please submit an <strong
     
   </select>
 </div>
+      
+    
+
+    
+    </fieldset>
+    
+
+  
+    
+    <fieldset class="mb-4 p-3 rounded border">
+      
+        <legend class="fw-bold">Requester Information</legend>
+      
+    
+
+    
+
+    
+      
+        
+<div class="mb-3">
+  <label for="requester_name" class="form-label">
+    Your Name *
+  </label>
+  <input type="text"
+         class="form-control"
+         id="requester_name"
+         name="requester_name"
+         placeholder="Full name"
+         data-bs-toggle="tooltip" title="Full name"
+         required>
+</div>
+
+      
+        
+<div class="mb-3">
+  <label for="requester_email" class="form-label">
+    Your Email *
+  </label>
+  <input type="text"
+         class="form-control"
+         id="requester_email"
+         name="requester_email"
+         placeholder="you@example.com"
+         data-bs-toggle="tooltip" title="you@example.com"
+         required>
+</div>
+
+      
+        
+<div class="mb-3">
+  <label for="requester_org" class="form-label">
+    Department / Organization
+  </label>
+  <input type="text"
+         class="form-control"
+         id="requester_org"
+         name="requester_org"
+         placeholder="Your organizational unit"
+         data-bs-toggle="tooltip" title="Your organizational unit"
+         >
+</div>
+
       
     
 
